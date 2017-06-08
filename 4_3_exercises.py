@@ -48,7 +48,7 @@ def polygon(t,n,length):
         lt(t,angle)
 #polygon(bob,n=30,length=10) #keyword argument,this syntax makes the program more readable
 #wait_for_user()
-#my circle
+
 """
 def circle(t,r):
     from math import pi
