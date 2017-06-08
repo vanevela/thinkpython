@@ -59,6 +59,7 @@ def circle(t,r):
 circle(bob,15)
 wait_for_user()
 """
+#circle for book
 from math import pi
 def circle(t,r):
     circumference = 2 * pi * r
@@ -67,3 +68,6 @@ def circle(t,r):
     polygon(t, n, length)
 circle(bob,15)
 wait_for_user()
+#Make a more general version of circle called arc that takes an additional parameter angle,
+#which determines what fraction of a circle to draw. angle is in units of degrees,
+#so when angle=360, arc should draw a complete circle.
