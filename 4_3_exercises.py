@@ -88,3 +88,6 @@ def arc(t,r,angle):
     for i in range(n):
         fd(t, step_length)
         lt(t, step_angle)
+arc(bob,30,45)
+wait_for_user()
+        
