@@ -36,6 +36,7 @@ wait_for_user()
 #Add another parameter named n and modify the body so it
 #draws an n-sided regular polygon. Hint: The exterior angles
 #of an n-sided regular polygon are 360/n degrees.
+"""
 from swampy.TurtleWorld import *
 world = TurtleWorld()
 bob = Turtle()
@@ -48,7 +49,8 @@ def polygon(t,n,length):
         lt(t,angle)
 #polygon(bob,n=30,length=10) #keyword argument,this syntax makes the program more readable
 #wait_for_user()
-
+#My circle
+"""
 """
 def circle(t,r):
     from math import pi
@@ -58,7 +60,7 @@ def circle(t,r):
     polygon(t,n,length)
 circle(bob,15)
 wait_for_user()
-"""
+
 #circle for book
 from math import pi
 def circle(t,r):
@@ -68,6 +70,21 @@ def circle(t,r):
     polygon(t, n, length)
 circle(bob,15)
 wait_for_user()
+"""
 #Make a more general version of circle called arc that takes an additional parameter angle,
 #which determines what fraction of a circle to draw. angle is in units of degrees,
 #so when angle=360, arc should draw a complete circle.
+from swampy.TurtleWorld import *
+world = TurtleWorld()
+bob = Turtle()
+bob.delay = 0.01
+
+from math import pi
+def arc(t,r,angle):
+    arc_length = (2 * pi * r * angle)/360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = float(angle) / n
+    for i in range(n):
+        fd(t, step_length)
+        lt(t, step_angle)
