@@ -105,14 +105,15 @@ def polygon(t,n,length):
     polyline(t, n, length, angle)
 
 def arc(t,r,angle):
-    arc_length = (2 * pi * r * angle)/360
+    arc_length = (2 * pi * r * abs(angle))/360
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
     step_angle = float(angle) / n
     polyline(t, n, step_length, step_angle)
+    
 
 def circle(t,r):
     arc(t,r,360)
 
-circle(bob,50)
+circle(bob,100)
 wait_for_user()
