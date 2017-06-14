@@ -17,13 +17,14 @@ def polyline(t,n,length, angle):
         fd(t,length)
         lt(t,angle)
 
-def polygon(t,n,length):
-    """draws a polygon with n sides
+def trian(t,length):
+    """draws a trian with n sides
 
     t: Turtle
     n: number of line segments
     length: length of each segment
     """
+    n=3
     angle = 360.0/n
     polyline(t, n, length, angle)
 
@@ -35,11 +36,9 @@ def pie(t,n,length):
     angle: angle that subtended the arcs
     """
     for i in range(n):
-        polygon(t,n,length)
-        lt(t,360.0/n)
+        trian(t,length)
+        lt(t,90)
 
 
-
-
-pie(bob,6,60)
+pie(bob,5,72)
 wait_for_user()
