@@ -1,7 +1,7 @@
 from swampy.TurtleWorld import *
 world = TurtleWorld()
 bob = Turtle()
-bob.delay = 0.01
+#bob.delay = 0.01
 
 import math
 
